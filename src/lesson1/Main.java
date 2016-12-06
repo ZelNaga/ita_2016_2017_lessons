@@ -1,3 +1,5 @@
+package lesson1;
+
 import rooms.*;
 
 public class Main {

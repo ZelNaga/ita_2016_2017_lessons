@@ -1,4 +1,4 @@
-package rooms;
+package lesson1.rooms;
 
 /**
  * Created by asv on 24.11.16.
