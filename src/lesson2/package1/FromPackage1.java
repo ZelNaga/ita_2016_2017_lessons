@@ -9,4 +9,10 @@ public class FromPackage1 {
     int packageVarFromPackage1Class = 3;
     private int privateVarFromPackage1Class = 4;
 
+    protected int getProtectedVarFromPackage1Class() {
+        return protectedVarFromPackage1Class;
+    }
+
+    public static void someStaticMethod() {}
+
 }
