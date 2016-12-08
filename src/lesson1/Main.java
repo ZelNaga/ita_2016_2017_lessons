@@ -1,6 +1,6 @@
 package lesson1;
 
-import rooms.*;
+import lesson1.rooms.*;
 
 public class Main {
 
