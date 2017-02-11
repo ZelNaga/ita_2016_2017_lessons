@@ -3,11 +3,11 @@ package lesson11;
 /**
  * Created by asv on 08.02.17.
  */
-public class Employee {
-    public long   employeeId;
+public class Employee implements Comparable<Employee> {
+    public int   employeeId;
     public String firstName;
 
-    public Employee(long employeeId, String firstName) {
+    public Employee(int employeeId, String firstName) {
         this.employeeId = employeeId;
         this.firstName = firstName;
     }
@@ -32,5 +32,11 @@ public class Employee {
     public int hashCode(){
         return (int) employeeId *
                 firstName.hashCode();
+    }
+
+    @Override
+    public int compareTo(Employee other) {
+
+        return this.firstName.compareToIgnoreCase(other.firstName);
     }
 }
