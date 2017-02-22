@@ -4,7 +4,7 @@ package lesson11;
  * Created by asv on 08.02.17.
  */
 public class Employee implements Comparable<Employee> {
-    public int   employeeId;
+    public Integer   employeeId;
     public String firstName;
 
     public Employee(int employeeId, String firstName) {

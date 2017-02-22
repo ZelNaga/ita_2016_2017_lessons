@@ -1,5 +1,6 @@
 package lesson11;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.TreeSet;
 
@@ -21,24 +22,45 @@ public class MainIn11 {
             System.out.println(i);
         }*/
         Employee e1 = new Employee(1, "z");
-        Employee e2 = new Employee(2, "q");
-        Employee e3 = new Employee(2, "t");
-        Employee e4 = new Employee(2, "w");
-        Employee e5 = new Employee(2, "n");
-        Employee e6 = new Employee(2, "a");
+        Employee e2 = new Employee(6, "q");
+        Employee e3 = new Employee(7, "t");
+        Employee e4 = new Employee(11, "w");
+        Employee e5 = new Employee(99, "n");
+        Employee e6 = new Employee(0, "a");
 
-        TreeSet<Employee> employees = new TreeSet<>();
+        TreeSet<Employee> employeesByFirstName = new TreeSet<>();
 
-        employees.add(e1);
-        employees.add(e2);
-        employees.add(e3);
-        employees.add(e4);
-        employees.add(e5);
-        employees.add(e6);
+        employeesByFirstName.add(e1);
+        employeesByFirstName.add(e2);
+        employeesByFirstName.add(e3);
+        employeesByFirstName.add(e4);
+        employeesByFirstName.add(e5);
+        employeesByFirstName.add(e6);
 
-        for (Employee e : employees) {
+        for (Employee e : employeesByFirstName) {
             System.out.println(e);
         }
+
+        System.out.println("\n");
+
+        TreeSet<Employee> employeesById = new TreeSet<>(new Comparator<Employee>() {
+            @Override
+            public int compare(Employee e1, Employee e2) {
+                return  e1.employeeId.compareTo(e2.employeeId);
+            }
+        });
+
+        employeesById.add(e1);
+        employeesById.add(e2);
+        employeesById.add(e3);
+        employeesById.add(e4);
+        employeesById.add(e5);
+        employeesById.add(e6);
+
+        for (Employee e : employeesById) {
+            System.out.println(e);
+        }
+
 
         /*System.out.println(employeeJon1);
         HashSet<Employee> hashSet = new HashSet<>();
