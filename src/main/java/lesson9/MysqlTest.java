@@ -12,8 +12,7 @@ public class MysqlTest {
 
     public static void main(String[] args) {
 
-        try {
-            Connection connection = DriverManager.getConnection(MYSQL_HOST, LOGIN, PASSWORD);
+        try(Connection connection = DriverManager.getConnection(MYSQL_HOST, LOGIN, PASSWORD)) {
 
             Statement stmt = connection.createStatement();
 
